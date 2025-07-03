@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mega Mind Model School - Quality education since 2009, founded by Mrs. A.O. Adedeji. Explore our programs, student life, and more.">
+    <meta name="keywords" content="Mega Mind Model School, education, primary school, secondary school, student life, Lagos, Nigeria">
+    <meta name="author" content="Mega Mind Model School">
+    <meta property="og:title" content="Mega Mind Model School - Quality Education Since 2009">
+    <meta property="og:description" content="Discover Mega Mind Model School, founded by Mrs. A.O. Adedeji, offering top-tier education in Lagos, Nigeria.">
+    <meta property="og:image" content="https://megamindschool.com/og-image.jpg">
+    <meta property="og:url" content="https://megamindschool.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Mega Mind Model School - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-pink: #FF69B4;
+            --primary-blue: #1E90FF;
+            --primary-gradient: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-pink) 100%);
+            --background-light: #F5F8FA;
+            --background-dark: #1C2526;
+            --text-primary-light: #2A004D;
+            --text-secondary-light: rgba(42, 0, 77, 0.7);
+            --text-primary-dark: #FFFFFF;
+            --text-secondary-dark: rgba(255, 255, 255, 0.85);
+            --glass-bg-light: rgba(255, 255, 255, 0.3);
+            --glass-bg-dark: rgba(255, 255, 255, 0.1);
+            --glass-border-light: rgba(30, 144, 255, 0.3);
+            --glass-border-dark: rgba(255, 105, 180, 0.3);
+            --background: var(--background-light);
+            --text-primary: var(--text-primary-light);
+            --text-secondary: var(--text-secondary-light);
+            --glass-bg: var(--glass-bg-light);
+            --glass-border: var(--glass-border-light);
+            --shadow-glow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            --max-width: 1200px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background);
+            min-height: 100vh;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            --background: var(--background-dark);
+            --text-primary: var(--text-primary-dark);
+            --text-secondary: var(--text-secondary-dark);
+            --glass-bg: var(--glass-bg-dark);
+            --glass-border: var(--glass-border-dark);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        /* Mode Toggle */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            width: clamp(40px, 5vw, 50px);
+            height: clamp(40px, 5vw, 50px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background 0.3s ease, border 0.3s ease;
+        }
+
+        .mode-toggle i {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 5px var(--primary-pink));
+        }
+
+        .mode-toggle:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .mode-toggle:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        /* Background Effect */
+        .school-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(30, 144, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.3) 0%, transparent 50%);
+            animation: bgShift 20s ease-in-out infinite;
+        }
+
+        body.dark-mode .school-bg {
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(30, 144, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.2) 0%, transparent 50%);
+        }
+
+        @keyframes bgShift {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Sparkle Effect */
+        .sparkle-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: radial-gradient(circle, var(--primary-pink) 20%, transparent 80%);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--primary-blue), 0 0 15px var(--primary-pink);
+            animation: floatSparkle 30s infinite linear, pulseGlow 2s infinite alternate;
+            opacity: 0.6;
+        }
+
+        body.dark-mode .sparkle {
+            opacity: 0.8;
+        }
+
+        @keyframes floatSparkle {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0.6; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.2); opacity: 0.6; }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 8px var(--primary-blue), 0 0 15px var(--primary-pink); }
+            100% { box-shadow: 0 0 12px var(--primary-blue), 0 0 20px var(--primary-pink); }
+        }
+
+        /* Header */
+        .school-header {
+            text-align: center;
+            padding: 5vh 0;
+        }
+
+        .school-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            background: var(--primary-gradient);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .school-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 1.5vh;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2vw;
+            padding: 0;
+            margin-bottom: 6vh;
+        }
+
+        .feature-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-1vh);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .feature-icon {
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 1.5vh;
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 10px var(--primary-pink));
+        }
+
+        .feature-card h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .feature-card p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+        }
+
+        /* Learning Path */
+        .path-container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 3vw;
+            margin: 0 0 6vh;
+        }
+
+        .path-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 2vh;
+        }
+
+        .path-nodes {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2vw;
+        }
+
+        .path-node {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            position: relative;
+        }
+
+        .path-orb {
+            width: clamp(60px, 10vw, 80px);
+            height: clamp(60px, 10vw, 80px);
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(1.4rem, 2vw, 1.8rem);
+            font-weight: bold;
+            margin: 0 auto 1.5vh;
+            box-shadow: 0 0 15px var(--primary-blue);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .path-orb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px var(--primary-pink);
+        }
+
+        .path-node h4 {
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .path-node p {
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            color: var(--text-secondary);
+        }
+
+        .path-connector {
+            position: absolute;
+            top: 30px;
+            right: -30px;
+            width: clamp(60px, 8vw, 80px);
+            height: 2px;
+            background: var(--primary-blue);
+            animation: dataFlow 2s ease-in-out infinite;
+        }
+
+        .path-node:last-child .path-connector {
+            display: none;
+        }
+
+        @keyframes dataFlow {
+            0% { opacity: 0.3; transform: scaleX(0); }
+            50% { opacity: 1; transform: scaleX(1); }
+            100% { opacity: 0.3; transform: scaleX(0); }
+        }
+
+        /* Stats Section */
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2vw;
+            padding: 0;
+            margin-bottom: 6vh;
+        }
+
+        .stat-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: clamp(2rem, 3vw, 3rem);
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .stat-label {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        /* Info Sections */
+        .info-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            margin: 0 0 6vh;
+        }
+
+        .info-section .section-icon {
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 1.5vh;
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 10px var(--primary-pink));
+        }
+
+        .info-section h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .info-section p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            padding: 1vw 2vw;
+            background: var(--primary-gradient);
+            border: none;
+            border-radius: 25px;
+            color: #FFFFFF;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-0.5vh);
+            box-shadow: var(--shadow-glow);
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-blue) 100%);
+        }
+
+        .cta-button:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2vw;
+            margin-bottom: 6vh;
+        }
+
+        .testimonial-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            flex: 1;
+            min-width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-1vh);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .testimonial-quote {
+            font-size: clamp(1.5rem, 2vw, 2rem);
+            color: var(--primary-pink);
+            margin-bottom: 1vh;
+        }
+
+        .testimonial-card p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+            margin-bottom: 1vh;
+        }
+
+        .testimonial-author {
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Social Sharing */
+        .social-share {
+            margin-top: 1vh;
+            display: flex;
+            gap: 1vw;
+        }
+
+        .share-btn {
+            color: var(--primary-pink);
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .share-btn:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2vh 0;
+            color: var(--text-secondary);
+            font-size: clamp(0.8rem, 1vw, 1rem);
+            margin-top: 6vh;
+            background: var(--glass-bg);
+        }
+
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            bottom: 2vh;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 1vw 2vw;
+            display: flex;
+            gap: 1vw;
+            box-shadow: var(--shadow-glow);
+            z-index: 1000;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1vw 1.5vw;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: clamp(0.7rem, 1vw, 0.9rem);
+            font-weight: 500;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.4);
+            color: var(--text-primary);
+            transform: translateY(-0.5vh);
+        }
+
+        .nav-item.active {
+            background: var(--primary-gradient);
+            color: #FFFFFF;
+        }
+
+        .nav-item:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        .nav-icon {
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            margin-bottom: 0.5vh;
+        }
+
+        /* Scroll Animations */
+        .section-animated {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section-animated.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .feature-grid, .stats-section, .testimonials-section {
+                grid-template-columns: 1fr;
+            }
+
+            .path-nodes {
+                flex-direction: column;
+            }
+
+            .path-connector {
+                display: none;
+            }
+
+            .school-title {
+                font-size: 2rem;
+            }
+
+            .social-share {
+                flex-direction: column;
+                gap: 1vh;
+            }
+
+            .nav-container {
+                padding: 1vw;
+                gap: 0.5vw;
+                bottom: 1vh;
+            }
+
+            .nav-item {
+                padding: 1vw;
+                font-size: 0.7rem;
+            }
+
+            .nav-icon {
+                font-size: 1rem;
+            }
+
+            .mode-toggle {
+                top: 10px;
+                left: 10px;
+                width: clamp(35px, 4vw, 40px);
+                height: clamp(35px, 4vw, 40px);
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        body.dark-mode ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-pink);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-blue);
+        }
+    </style>
+</head>
+<body>
+    <button class="mode-toggle" aria-label="Toggle between day and dark mode" tabindex="0">
+        <i class="fas fa-sun"></i>
+    </button>
+    <div class="school-bg" data-parallax="0.3"></div>
+    <div class="sparkle-field" id="sparkleField"></div>
+    <main class="main-content">
+        <div class="container">
+            <header class="school-header">
+                <h1 class="school-title">Mega Mind Model School</h1>
+                <p class="school-subtitle">Empowering Young Minds Since 2009</p>
+            </header>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-school"></i></span>
+                <h3>Welcome to Mega Mind</h3>
+                <p>Founded in 2009 by Mrs. A.O. Adedeji, Mega Mind Model School is a beacon of quality education in Lagos, Nigeria. We nurture young minds with a blend of academic excellence, character development, and innovative teaching methods, preparing students for a bright future.</p>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-eye"></i></span>
+                <h3>Our Vision & Mission</h3>
+                <p><strong>Vision:</strong> To be a leading institution that inspires lifelong learning and global citizenship.<br><strong>Mission:</strong> To provide a nurturing environment where students excel academically, develop strong moral values, and embrace creativity and innovation.</p>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/vision" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="feature-grid section-animated">
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fas fa-book-open"></i></span>
+                    <h3>Holistic Curriculum</h3>
+                    <p>Our curriculum integrates academics, arts, and technology to foster well-rounded students ready for global challenges.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                    <h3>Expert Educators</h3>
+                    <p>Our dedicated teachers inspire and guide students to achieve their full potential with personalized attention.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <h3>Modern Facilities</h3>
+                    <p>State-of-the-art classrooms, science labs, and sports facilities enhance the learning experience.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="fas fa-heart"></i></span>
+                    <h3>Values-Driven</h3>
+                    <p>We instill discipline, integrity, and leadership to shape responsible and compassionate individuals.</p>
+                </div>
+            </section>
+            <section class="path-container section-animated">
+                <h2 class="path-title">Our Academic Journey</h2>
+                <div class="path-nodes">
+                    <div class="path-node">
+                        <a href="academics.html#creche" class="path-orb" aria-label="Creche and Nursery">01</a>
+                        <div class="path-connector"></div>
+                        <h4>Creche & Nursery</h4>
+                        <p>Foundational learning for ages 1-5.</p>
+                    </div>
+                    <div class="path-node">
+                        <a href="academics.html#primary" class="path-orb" aria-label="Primary Education">02</a>
+                        <div class="path-connector"></div>
+                        <h4>Primary Education</h4>
+                        <p>Core academics for ages 6-11.</p>
+                    </div>
+                    <div class="path-node">
+                        <a href="academics.html#secondary" class="path-orb" aria-label="Secondary Education">03</a>
+                        <div class="path-connector"></div>
+                        <h4>Secondary Education</h4>
+                        <p>Advanced learning for ages 12-17.</p>
+                    </div>
+                    <div class="path-node">
+                        <a href="academics.html#extracurricular" class="path-orb" aria-label="Extracurricular Activities">04</a>
+                        <h4>Extracurricular</h4>
+                        <p>Sports, arts, and leadership programs.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="stats-section section-animated">
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Students Enrolled</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Qualified Teachers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-users"></i></span>
+                <h3>Student Life</h3>
+                <p>At Mega Mind, student life is vibrant and engaging. From debate clubs and music ensembles to science fairs and sports days, our students thrive in a dynamic environment that fosters creativity, teamwork, and personal growth.</p>
+                <a href="academics.html#extracurricular" class="cta-button" aria-label="Explore student life">Explore Student Life</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/student-life" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-trophy"></i></span>
+                <h3>Achievements & Awards</h3>
+                <p>Our students and faculty have earned numerous accolades, including top ranks in national math Olympiads, literary awards, and sports championships, reflecting our commitment to excellence.</p>
+                <a href="about.html#achievements" class="cta-button" aria-label="View achievements">View Achievements</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/achievements" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-user-plus"></i></span>
+                <h3>Admissions Open</h3>
+                <p>Join our vibrant community! Admissions are open for the 2025/2026 academic session. Apply now to secure a spot for your child in our nurturing and innovative environment.</p>
+                <a href="admission.html" class="cta-button" aria-label="Apply now">Apply Now</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/admission" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-book"></i></span>
+                <h3>Parent Resources</h3>
+                <p>We support parents with resources like academic calendars, parent portals, and guides on supporting student success, ensuring a strong partnership between home and school.</p>
+                <a href="contact.html#resources" class="cta-button" aria-label="Access resources">Access Resources</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/resources" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-calendar-alt"></i></span>
+                <h3>Upcoming Events</h3>
+                <p>Join us for exciting events like our Annual Open Day, Science Fair, and Cultural Festival. Stay updated on opportunities to engage with our community.</p>
+                <a href="contact.html#events" class="cta-button" aria-label="View events">View Events</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/events" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="testimonials-section section-animated">
+                <div class="testimonial-card">
+                    <span class="testimonial-quote"><i class="fas fa-quote-left"></i></span>
+                    <p>Mega Mind transformed my child’s confidence and academic performance!</p>
+                    <div class="testimonial-author">Mrs. Adebayo, Parent</div>
+                </div>
+                <div class="testimonial-card">
+                    <span class="testimonial-quote"><i class="fas fa-quote-left"></i></span>
+                    <p>The teachers are exceptional, and the facilities are top-notch.</p>
+                    <div class="testimonial-author">Mr. Okeke, Parent</div>
+                </div>
+                <div class="testimonial-card">
+                    <span class="testimonial-quote"><i class="fas fa-quote-left"></i></span>
+                    <p>My daughter loves the vibrant student life and supportive community.</p>
+                    <div class="testimonial-author">Mrs. Chukwu, Parent</div>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-envelope"></i></span>
+                <h3>Contact Us</h3>
+                <p>Have questions? Reach out to our team for inquiries about admissions, programs, or events. We’re here to help your family succeed.</p>
+                <a href="contact.html" class="cta-button" aria-label="Contact us">Contact Us</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/contact" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <nav class="nav-container">
+        <a href="index.html" class="nav-item active" tabindex="0"><span class="nav-icon"><i class="fas fa-home"></i></span>Home</a>
+        <a href="about.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-info-circle"></i></span>About</a>
+        <a href="academics.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-book"></i></span>Academics</a>
+        <a href="admission.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-user-plus"></i></span>Admission</a>
+        <a href="contact.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+    </nav>
+    <footer>
+        © 2025 Mega Mind Model School | Built by Sisco Ask
+    </footer>
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const toggleButton = document.querySelector('.mode-toggle i');
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleButton.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
+
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const body = document.body;
+            const toggleButton = document.querySelector('.mode-toggle i');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                toggleButton.className = 'fas fa-sun';
+            } else {
+                body.classList.remove('dark-mode');
+                toggleButton.className = 'fas fa-moon';
+            }
+        }
+
+        // Sparkle Field
+        function createSparkleField() {
+            const container = document.getElementById('sparkleField');
+            for (let i = 0; i < 25; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 30 + 's';
+                sparkle.style.animationDuration = (Math.random() * 20 + 15) + 's';
+                sparkle.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
+                container.appendChild(sparkle);
+            }
+        }
+
+        // Navigation
+        function initNavigation() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            navItems.forEach(item => {
+                const href = item.getAttribute('href');
+                if (href === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        // Stats Animation
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = stat.textContent.replace('+', '').replace('%', '');
+                const number = parseInt(target) || 0;
+                if (!number) return;
+                let current = 0;
+                const increment = number / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= number) {
+                        current = number;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current) + (target.includes('+') ? '+' : target.includes('%') ? '%' : '');
+                }, 20);
+            });
+        }
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const sections = document.querySelectorAll('.section-animated');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+        }
+
+        // Parallax Effect
+        function initParallax() {
+            const bg = document.querySelector('.school-bg');
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        bg.style.transform = `translateY(${scrollY * 0.3}px)`;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+
+        // Initialize
+        function init() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    loadTheme();
+                    document.querySelector('.mode-toggle').addEventListener('click', toggleTheme);
+                    createSparkleField();
+                    initNavigation();
+                    animateStats();
+                    initScrollAnimations();
+                    initParallax();
+                });
+            } else {
+                loadTheme();
+                document.querySelector('.mode-toggle').addEventListener('click', toggleTheme);
+                createSparkleField();
+                initNavigation();
+                animateStats();
+                initScrollAnimations();
+                initParallax();
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>

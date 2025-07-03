@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the admission process, requirements, and financial aid at Mega Mind Model School in Lagos, Nigeria.">
+    <meta name="keywords" content="Mega Mind Model School, admission, enrollment, creche, nursery, primary, secondary, financial aid, Lagos, Nigeria">
+    <meta name="author" content="Mega Mind Model School">
+    <meta property="og:title" content="Admissions at Mega Mind Model School">
+    <meta property="og:description" content="Join Mega Mind Model School through our streamlined admission process. Discover requirements, tuition, and financial aid options in Lagos, Nigeria.">
+    <meta property="og:image" content="https://megamindschool.com/og-image.jpg">
+    <meta property="og:url" content="https://megamindschool.com/admission.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Admissions - Mega Mind Model School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-pink: #FF69B4;
+            --primary-blue: #1E90FF;
+            --primary-gradient: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-pink) 100%);
+            --background-light: #F5F8FA;
+            --background-dark: #1C2526;
+            --text-primary-light: #2A004D;
+            --text-secondary-light: rgba(42, 0, 77, 0.7);
+            --text-primary-dark: #FFFFFF;
+            --text-secondary-dark: rgba(255, 255, 255, 0.85);
+            --glass-bg-light: rgba(255, 255, 255, 0.3);
+            --glass-bg-dark: rgba(255, 255, 255, 0.1);
+            --glass-border-light: rgba(30, 144, 255, 0.3);
+            --glass-border-dark: rgba(255, 105, 180, 0.3);
+            --background: var(--background-light);
+            --text-primary: var(--text-primary-light);
+            --text-secondary: var(--text-secondary-light);
+            --glass-bg: var(--glass-bg-light);
+            --glass-border: var(--glass-border-light);
+            --shadow-glow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            --max-width: 1200px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background);
+            min-height: 100vh;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            --background: var(--background-dark);
+            --text-primary: var(--text-primary-dark);
+            --text-secondary: var(--text-secondary-dark);
+            --glass-bg: var(--glass-bg-dark);
+            --glass-border: var(--glass-border-dark);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        /* Mode Toggle */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            width: clamp(40px, 5vw, 50px);
+            height: clamp(40px, 5vw, 50px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background 0.3s ease, border 0.3s ease;
+        }
+
+        .mode-toggle i {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 5px var(--primary-pink));
+        }
+
+        .mode-toggle:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .mode-toggle:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        /* Background Effect */
+        .school-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(30, 144, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.3) 0%, transparent 50%);
+            animation: bgShift 20s ease-in-out infinite;
+        }
+
+        body.dark-mode .school-bg {
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(30, 144, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.2) 0%, transparent 50%);
+        }
+
+        @keyframes bgShift {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Sparkle Effect */
+        .sparkle-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: radial-gradient(circle, var(--primary-pink) 20%, transparent 80%);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--primary-blue), 0 0 15px var(--primary-pink);
+            animation: floatSparkle 30s infinite linear, pulseGlow 2s infinite alternate;
+            opacity: 0.6;
+        }
+
+        body.dark-mode .sparkle {
+            opacity: 0.8;
+        }
+
+        @keyframes floatSparkle {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0.6; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.2); opacity: 0.6; }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 8px var(--primary-blue), 0 0 15px var(--primary-pink); }
+            100% { box-shadow: 0 0 12px var(--primary-blue), 0 0 20px var(--primary-pink); }
+        }
+
+        /* Header */
+        .school-header {
+            text-align: center;
+            padding: 5vh 0;
+        }
+
+        .school-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            background: var(--primary-gradient);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .school-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 1.5vh;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Info Sections */
+        .info-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            margin: 0 0 6vh;
+            animation: scaleHover 0.3s ease;
+        }
+
+        .info-section .section-icon {
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 1.5vh;
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 10px var(--primary-pink));
+        }
+
+        .info-section h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .info-section p, .info-section li {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+        }
+
+        /* Section Title */
+        .path-title {
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 3vh;
+            text-align: center;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Program Grid */
+        .program-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2vw;
+            padding: 0;
+            margin-bottom: 6vh;
+        }
+
+        .program-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+
+        .program-card:hover {
+            transform: translateY(-1vh) scale(1.03);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .program-card h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .program-card p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+            margin-bottom: 1vh;
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            padding: 1vw 2vw;
+            background: var(--primary-gradient);
+            border: none;
+            border-radius: 25px;
+            color: #FFFFFF;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-0.5vh) scale(1.03);
+            box-shadow: var(--shadow-glow);
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-blue) 100%);
+        }
+
+        .cta-button:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        /* Social Sharing */
+        .social-share {
+            margin-top: 1vh;
+            display: flex;
+            gap: 1vw;
+        }
+
+        .share-btn {
+            color: var(--primary-pink);
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .share-btn:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2vh 0;
+            color: var(--text-secondary);
+            font-size: clamp(0.8rem, 1vw, 1rem);
+            margin-top: 6vh;
+            background: var(--glass-bg);
+        }
+
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            bottom: 2vh;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 1vw 2vw;
+            display: flex;
+            gap: 1vw;
+            box-shadow: var(--shadow-glow);
+            z-index: 1000;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1vw 1.5vw;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: clamp(0.7rem, 1vw, 0.9rem);
+            font-weight: 500;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.4);
+            color: var(--text-primary);
+            transform: translateY(--0.5vh);
+        }
+
+        .nav-item.active {
+            background: var(--primary-gradient);
+            color: #FFFFFF;
+        }
+
+        .nav-item:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        .nav-icon {
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            margin-bottom: 0.5vh;
+        }
+
+        /* Scroll Animations */
+        .section-animated {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section-animated.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .school-title {
+                font-size: 2rem;
+            }
+
+            .path-title {
+                font-size: 1.5rem;
+            }
+
+            .social-share {
+                flex-direction: column;
+                gap: 1vh;
+            }
+
+            .nav-container {
+                padding: 1vw;
+                gap: 0.5vw;
+                bottom: 1vh;
+            }
+
+            .nav-item {
+                padding: 1vw;
+                font-size: 0.7rem;
+            }
+
+            .nav-icon {
+                font-size: 1rem;
+            }
+
+            .mode-toggle {
+                top: 10px;
+                left: 10px;
+                width: clamp(35px, 4vw, 40px);
+                height: clamp(35px, 4vw, 40px);
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        body.dark-mode ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-pink);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-blue);
+        }
+    </style>
+</head>
+<body>
+    <button class="mode-toggle" aria-label="Toggle between day and dark mode" tabindex="0">
+        <i class="fas fa-moon"></i>
+    </button>
+    <div class="school-bg" data-parallax="0.3"></div>
+    <div class="sparkle-field" id="sparkleField"></div>
+    <main class="main-content">
+        <div class="container">
+            <header class="school-header">
+                <h1 class="school-title">Admissions at Mega Mind</h1>
+                <p class="school-subtitle">Join Our Vibrant Learning Community</p>
+            </header>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-user-plus"></i></span>
+                <h3>Welcome to Our Admission Process</h3>
+                <p>At Mega Mind Model School, we are committed to making the admission process seamless and transparent. Our goal is to welcome students who are eager to learn and grow in a nurturing environment. Below, you’ll find detailed information about our admission process, requirements, tuition, and financial aid options.</p>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/admission" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="section-animated">
+                <h2 class="path-title">Admission Process</h2>
+                <div class="program-grid">
+                    <div class="program-card">
+                        <h3>Step 1: Inquiry</h3>
+                        <p>Contact our admissions team via our contact page or call us to learn more about our programs and schedule a tour.</p>
+                    </div>
+                    <div class="program-card">
+                        <h3>Step 2: Application</h3>
+                        <p>Complete the application form available which will be sent to you by our support team. Ensure all required documents are submitted.</p>
+                        
+                    </div>
+                    <div class="program-card">
+                        <h3>Step 3: Assessment</h3>
+                        <p>Applicants will undergo an age-appropriate assessment to evaluate their readiness for our programs.</p>
+                    </div>
+                    <div class="program-card">
+                        <h3>Step 4: Interview</h3>
+                        <p>A brief interview with the student and parents/guardians to discuss goals and expectations.</p>
+                    </div>
+                    <div class="program-card">
+                        <h3>Step 5: Admission Decision</h3>
+                        <p>Receive an admission decision within two weeks of completing all steps. Accepted students will receive an enrollment package.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-file-alt"></i></span>
+                <h3>Admission Requirements</h3>
+                <p>We strive to ensure a smooth admission process. Below are the general requirements for each program:</p>
+                <ul>
+                    <li><strong>Creche & Nursery (Ages 1–5)</strong>: Birth certificate, immunization records, and a recent passport-sized photograph.</li>
+                    <li><strong>Primary (Ages 6–11)</strong>: Birth certificate, previous school records (if applicable), immunization records, and a recent passport-sized photograph.</li>
+                    <li><strong>Secondary (Ages 12–17)</strong>: Birth certificate, previous school records, standardized test results (if applicable), immunization records, and a recent passport-sized photograph.</li>
+                    <li><strong>Additional Requirements</strong>: A completed application form and a non-refundable application fee (contact us for details).</li>
+                </ul>
+                <p>Note: Additional documents may be required based on the program or individual circumstances.</p>
+                <a href="contact.html#requirements" class="cta-button" aria-label="Contact us for more details">Contact Us for Details</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/admission#requirements" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-money-bill-wave"></i></span>
+                <h3>Tuition & Fees</h3>
+                <p>Our tuition structure is designed to reflect the value of our comprehensive programs while remaining accessible. For detailed tuition information, please contact our admissions office.</p>
+                <ul>
+                    <li><strong>Creche & Nursery</strong>: Includes meals, learning materials, and basic extracurricular activities.</li>
+                    <li><strong>Primary</strong>: Covers core academic programs, access to digital tools, and select extracurricular activities.</li>
+                    <li><strong>Secondary</strong>: Includes advanced academic programs, STEM resources, and career counseling services.</li>
+                    <li><strong>Additional Fees</strong>: Uniforms, transportation, and optional extracurricular programs may incur additional costs.</li>
+                </ul>
+                <a href="contact.html#tuition" class="cta-button" aria-label="Request Tuition Information">Request Tuition Info</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/admission#tuition" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-hand-holding-heart"></i></span>
+                <h3>Financial Aid & Scholarships</h3>
+                <p>We believe in making quality education accessible. Mega Mind Model School offers financial aid and scholarship opportunities based on merit and need.</p>
+                <ul>
+                    <li><strong>Merit-Based Scholarships</strong>: Available for students with exceptional academic or extracurricular achievements.</li>
+                    <li><strong>Need-Based Financial Aid</strong>: Support for families demonstrating financial need.</li>
+                    <li><strong>Sibling Discounts</strong>: Reduced tuition for families with multiple enrolled students.</li>
+                </ul>
+                <p>To apply for financial aid or scholarships, include the relevant application form with your admission documents.</p>
+                <a href="contact.html#financial-aid" class="cta-button" aria-label="Learn about Financial Aid">Learn More</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/admission#financial-aid" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-school"></i></span>
+                <h3>Why Choose Mega Mind?</h3>
+                <p>Join a community dedicated to academic excellence, personal growth, and global awareness. Our programs are designed to empower students to succeed in a rapidly changing world.</p>
+                <ul>
+                    <li>Comprehensive curriculum blending Nigerian and international standards.</li>
+                    <li>State-of-the-art facilities and resources.</li>
+                    <li>Dedicated faculty with a student-centered approach.</li>
+                    <li>Vibrant extracurricular opportunities to foster creativity and leadership.</li>
+                </ul>
+                <a href="#apply" class="cta-button" aria-label="Apply Now">Apply Now</a>
+                <a href="contact.html" class="cta-button" aria-label="Contact Us" style="margin-left: 1vw;">Contact Us</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/admission" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <nav class="nav-container">
+        <a href="index.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-home"></i></span>Home</a>
+        <a href="about.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-info-circle"></i></span>About</a>
+        <a href="academics.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-book"></i></span>Academics</a>
+        <a href="admission.html" class="nav-item active" tabindex="0"><span class="nav-icon"><i class="fas fa-user-plus"></i></span>Admission</a>
+        <a href="contact.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+    </nav>
+    <footer>
+        © 2025 Mega Mind Model School | Founded by Mrs. A.O. Adedeji | Built by Sisco Ask
+    </footer>
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const toggleButton = document.querySelector('.mode-toggle i');
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleButton.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
+
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const body = document.body;
+            const toggleButton = document.querySelector('.mode-toggle i');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                toggleButton.className = 'fas fa-sun';
+            } else {
+                body.classList.remove('dark-mode');
+                toggleButton.className = 'fas fa-moon';
+            }
+        }
+
+        // Sparkle Field
+        function createSparkleField() {
+            const container = document.getElementById('sparkleField');
+            for (let i = 0; i < 25; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 30 + 's';
+                sparkle.style.animationDuration = (Math.random() * 20 + 15) + 's';
+                sparkle.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
+                container.appendChild(sparkle);
+            }
+        }
+
+        // Navigation
+        function initNavigation() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            navItems.forEach(item => {
+                const href = item.getAttribute('href');
+                if (href === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const sections = document.querySelectorAll('.section-animated');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+        }
+
+        // Parallax Effect
+        function initParallax() {
+            const bg = document.querySelector('.school-bg');
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        bg.style.transform = `translateY(${scrollY * 0.3}px)`;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+
+        // Initialize
+        function init() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    loadTheme();
+                    document.querySelector('.mode-toggle').addEventListener('click', toggleTheme);
+                    createSparkleField();
+                    initNavigation();
+                    initScrollAnimations();
+                    initParallax();
+                });
+            } else {
+                loadTheme();
+                document.querySelector('.mode-toggle').addEventListener('click', toggleTheme);
+                createSparkleField();
+                initNavigation();
+                initScrollAnimations();
+                initParallax();
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>

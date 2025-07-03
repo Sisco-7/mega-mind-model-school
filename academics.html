@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Mega Mind Model School’s academic programs, teaching methods, faculty, and resources in Lagos, Nigeria.">
+    <meta name="keywords" content="Mega Mind Model School, academics, creche, nursery, primary, secondary, extracurricular, teaching, faculty, Lagos, Nigeria">
+    <meta name="author" content="Mega Mind Model School">
+    <meta property="og:title" content="Academics at Mega Mind Model School">
+    <meta property="og:description" content="Discover our comprehensive academic programs, innovative teaching methods, dedicated faculty, and global curriculum, empowering students in Lagos, Nigeria.">
+    <meta property="og:image" content="https://megamindschool.com/og-image.jpg">
+    <meta property="og:url" content="https://megamindschool.com/academics.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Academics - Mega Mind Model School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-pink: #FF69B4;
+            --primary-blue: #1E90FF;
+            --primary-gradient: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-pink) 100%);
+            --background-light: #F5F8FA;
+            --background-dark: #1C2526;
+            --text-primary-light: #2A004D;
+            --text-secondary-light: rgba(42, 0, 77, 0.7);
+            --text-primary-dark: #FFFFFF;
+            --text-secondary-dark: rgba(255, 255, 255, 0.85);
+            --glass-bg-light: rgba(255, 255, 255, 0.3);
+            --glass-bg-dark: rgba(255, 255, 255, 0.1);
+            --glass-border-light: rgba(30, 144, 255, 0.3);
+            --glass-border-dark: rgba(255, 105, 180, 0.3);
+            --background: var(--background-light);
+            --text-primary: var(--text-primary-light);
+            --text-secondary: var(--text-secondary-light);
+            --glass-bg: var(--glass-bg-light);
+            --glass-border: var(--glass-border-light);
+            --shadow-glow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            --max-width: 1200px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background);
+            min-height: 100vh;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            --background: var(--background-dark);
+            --text-primary: var(--text-primary-dark);
+            --text-secondary: var(--text-secondary-dark);
+            --glass-bg: var(--glass-bg-dark);
+            --glass-border: var(--glass-border-dark);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        /* Mode Toggle */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            width: clamp(40px, 5vw, 50px);
+            height: clamp(40px, 5vw, 50px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background 0.3s ease, border 0.3s ease;
+        }
+
+        .mode-toggle i {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 5px var(--primary-pink));
+        }
+
+        .mode-toggle:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .mode-toggle:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        /* Background Effect */
+        .school-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(30, 144, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.3) 0%, transparent 50%);
+            animation: bgShift 20s ease-in-out infinite;
+        }
+
+        body.dark-mode .school-bg {
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(30, 144, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.2) 0%, transparent 50%);
+        }
+
+        @keyframes bgShift {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Sparkle Effect */
+        .sparkle-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: radial-gradient(circle, var(--primary-pink) 20%, transparent 80%);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--primary-blue), 0 0 15px var(--primary-pink);
+            animation: floatSparkle 30s infinite linear, pulseGlow 2s infinite alternate;
+            opacity: 0.6;
+        }
+
+        body.dark-mode .sparkle {
+            opacity: 0.8;
+        }
+
+        @keyframes floatSparkle {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0.6; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.2); opacity: 0.6; }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 8px var(--primary-blue), 0 0 15px var(--primary-pink); }
+            100% { box-shadow: 0 0 12px var(--primary-blue), 0 0 20px var(--primary-pink); }
+        }
+
+        /* Header */
+        .school-header {
+            text-align: center;
+            padding: 5vh 0;
+        }
+
+        .school-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            background: var(--primary-gradient);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .school-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 1.5vh;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Info Sections */
+        .info-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            margin: 0 0 6vh;
+            animation: scaleHover 0.3s ease;
+        }
+
+        .info-section .section-icon {
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 1.5vh;
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 10px var(--primary-pink));
+        }
+
+        .info-section h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .info-section p, .info-section li {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+        }
+
+        /* Section Title */
+        .path-title {
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 3vh;
+            text-align: center;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Program Grid */
+        .program-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Stacked vertically */
+            gap: 2vw;
+            padding: 0;
+            margin-bottom: 6vh;
+        }
+
+        .program-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+
+        .program-card:hover {
+            transform: translateY(-1vh) scale(1.03);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .program-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            margin: 0 auto 1vh;
+            border: 2px solid var(--primary-blue);
+            box-shadow: 0 0 10px var(--primary-pink);
+            animation: scaleHover 0.3s ease;
+        }
+
+        @keyframes scaleHover {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.03); }
+        }
+
+        .program-card h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .program-card p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+            margin-bottom: 1vh;
+        }
+
+        /* Teaching Methodology Grid */
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Stacked vertically */
+            gap: 2vw;
+            padding: 0;
+            margin-bottom: 6vh;
+        }
+
+        .methodology-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            transition: all 0.4s ease;
+        }
+
+        .methodology-card:hover {
+            transform: translateY(-1vh) scale(1.03);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .methodology-icon {
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 1.5vh;
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 10px var(--primary-pink));
+        }
+
+        .methodology-card h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .methodology-card p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+        }
+
+        /* Faculty Excellence */
+        .faculty-section {
+            display: flex;
+            flex-direction: column; /* Stacked vertically */
+            gap: 2vw;
+            margin-bottom: 6vh;
+        }
+
+        .faculty-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-1vh) scale(1.03);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .faculty-card h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .faculty-card p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+        }
+
+        /* Success Stories */
+        .success-stories {
+            display: flex;
+            flex-direction: column; /* Stacked vertically */
+            gap: 2vw;
+            margin-bottom: 6vh;
+        }
+
+        .success-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            transition: transform 0.3s ease;
+        }
+
+        .success-card:hover {
+            transform: translateY(-1vh) scale(1.03);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .success-quote {
+            font-size: clamp(1.5rem, 2vw, 2rem);
+            color: var(--primary-pink);
+            margin-bottom: 1vh;
+        }
+
+        .success-card p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+            margin-bottom: 1vh;
+        }
+
+        .success-author {
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            padding: 1vw 2vw;
+            background: var(--primary-gradient);
+            border: none;
+            border-radius: 25px;
+            color: #FFFFFF;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-0.5vh) scale(1.03);
+            box-shadow: var(--shadow-glow);
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-blue) 100%);
+        }
+
+        .cta-button:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        /* Social Sharing */
+        .social-share {
+            margin-top: 1vh;
+            display: flex;
+            gap: 1vw;
+        }
+
+        .share-btn {
+            color: var(--primary-pink);
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .share-btn:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2vh 0;
+            color: var(--text-secondary);
+            font-size: clamp(0.8rem, 1vw, 1rem);
+            margin-top: 6vh;
+            background: var(--glass-bg);
+        }
+
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            bottom: 2vh;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 1vw 2vw;
+            display: flex;
+            gap: 1vw;
+            box-shadow: var(--shadow-glow);
+            z-index: 1000;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1vw 1.5vw;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: clamp(0.7rem, 1vw, 0.9rem);
+            font-weight: 500;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.4);
+            color: var(--text-primary);
+            transform: translateY(-0.5vh);
+        }
+
+        .nav-item.active {
+            background: var(--primary-gradient);
+            color: #FFFFFF;
+        }
+
+        .nav-item:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        .nav-icon {
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            margin-bottom: 0.5vh;
+        }
+
+        /* Scroll Animations */
+        .section-animated {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section-animated.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .program-grid, .methodology-grid, .faculty-section, .success-stories {
+                grid-template-columns: 1fr;
+            }
+
+            .program-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .school-title {
+                font-size: 2rem;
+            }
+
+            .path-title {
+                font-size: 1.5rem;
+            }
+
+            .social-share {
+                flex-direction: column;
+                gap: 1vh;
+            }
+
+            .nav-container {
+                padding: 1vw;
+                gap: 0.5vw;
+                bottom: 1vh;
+            }
+
+            .nav-item {
+                padding: 1vw;
+                font-size: 0.7rem;
+            }
+
+            .nav-icon {
+                font-size: 1rem;
+            }
+
+            .mode-toggle {
+                top: 10px;
+                left: 10px;
+                width: clamp(35px, 4vw, 40px);
+                height: clamp(35px, 4vw, 40px);
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        body.dark-mode ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-pink);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-blue);
+        }
+    </style>
+</head>
+<body>
+    <button class="mode-toggle" aria-label="Toggle between day and dark mode" tabindex="0">
+        <i class="fas fa-moon"></i>
+    </button>
+    <div class="school-bg" data-parallax="0.3"></div>
+    <div class="sparkle-field" id="sparkleField"></div>
+    <main class="main-content">
+        <div class="container">
+            <header class="school-header">
+                <h1 class="school-title">Academics at Mega Mind</h1>
+                <p class="school-subtitle">Nurturing Excellence Through Comprehensive Education</p>
+            </header>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-book-open"></i></span>
+                <h3>Our Academic Programs</h3>
+                <p>At Mega Mind Model School, our academic programs are designed to foster intellectual growth, creativity, and critical thinking from early childhood to young adulthood. We offer a structured yet dynamic curriculum that prepares students for global challenges.</p>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/academics" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="section-animated">
+                <h2 class="path-title">Our Programs</h2>
+                <div class="program-grid">
+                    <div class="program-card">
+                        <img src="https://via.placeholder.com/180" alt="Creche and Nursery Program" class="program-image">
+                        <h3>Creche & Nursery</h3>
+                        <p>For ages 1–5, our early learning program focuses on play-based education, fostering social skills, creativity, and foundational literacy and numeracy.</p>
+                        <a href="admission.html#creche" class="cta-button" aria-label="Apply for Creche and Nursery">Apply Now</a>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://via.placeholder.com/180" alt="Primary Education Program" class="program-image">
+                        <h3>Primary Education</h3>
+                        <p>For ages 6–11, our primary program emphasizes core subjects like Math, English, and Science, integrated with arts and technology.</p>
+                        <a href="admission.html#primary" class="cta-button" aria-label="Apply for Primary Education">Apply Now</a>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://via.placeholder.com/180" alt="Secondary Education Program" class="program-image">
+                        <h3>Secondary Education</h3>
+                        <p>For ages 12–17, our secondary program offers advanced academics, including STEM and humanities, preparing students for higher education.</p>
+                        <a href="admission.html#secondary" class="cta-button" aria-label="Apply for Secondary Education">Apply Now</a>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://via.placeholder.com/180" alt="Extracurricular Activities" class="program-image">
+                        <h3>Extracurricular Activities</h3>
+                        <p>From sports to music, debate, and robotics, our extracurricular programs build leadership, teamwork, and creativity.</p>
+                        <a href="contact.html#extracurricular" class="cta-button" aria-label="Learn about Extracurricular Activities">Learn More</a>
+                    </div>
+                </div>
+            </section>
+            <section class="section-animated">
+                <h2 class="path-title">Teaching Methodology</h2>
+                <div class="methodology-grid">
+                    <div class="methodology-card">
+                        <span class="methodology-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                        <h3>Project-Based Learning</h3>
+                        <p>Students engage in hands-on projects to apply knowledge, fostering problem-solving and collaboration.</p>
+                    </div>
+                    <div class="methodology-card">
+                        <span class="methodology-icon"><i class="fas fa-laptop-code"></i></span>
+                        <h3>Blended Learning</h3>
+                        <p>We combine traditional teaching with digital tools to create engaging, personalized learning experiences.</p>
+                    </div>
+                    <div class="methodology-card">
+                        <span class="methodology-icon"><i class="fas fa-users-cog"></i></span>
+                        <h3>Collaborative Learning</h3>
+                        <p>Group activities and peer learning encourage teamwork and communication skills.</p>
+                    </div>
+                    <div class="methodology-card">
+                        <span class="methodology-icon"><i class="fas fa-brain"></i></span>
+                        <h3>Inquiry-Based Learning</h3>
+                        <p>Students explore questions and concepts, driving curiosity and critical thinking.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-graduation-cap"></i></span>
+                <h3>Curriculum Highlights</h3>
+                <p>Our curriculum blends Nigerian and international standards, focusing on:</p>
+                <ul>
+                    <li><strong>STEM Education</strong>: Hands-on projects in science, technology, engineering, and math.</li>
+                    <li><strong>Arts & Culture</strong>: Music, drama, and visual arts to nurture creativity.</li>
+                    <li><strong>Character Development</strong>: Programs fostering integrity, leadership, and empathy.</li>
+                    <li><strong>Technology Integration</strong>: Digital literacy and coding for a tech-driven world.</li>
+                </ul>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/academics#curriculum" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="section-animated">
+                <h2 class="path-title">Faculty Excellence</h2>
+                <div class="faculty-section">
+                    <div class="faculty-card">
+                        <h3>Highly Qualified Educators</h3>
+                        <p>Our teachers hold advanced degrees and certifications, bringing expertise to every classroom.</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h3>Continuous Training</h3>
+                        <p>Regular professional development ensures our faculty stays updated with modern teaching methods.</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h3>Student-Centered Approach</h3>
+                        <p>Our educators prioritize individual student needs, fostering a supportive learning environment.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-book"></i></span>
+                <h3>Learning Resources</h3>
+                <p>Our students have access to a state-of-the-art library, digital learning platforms, and interactive tools to support academic success.</p>
+                <a href="contact.html#resources" class="cta-button" aria-label="Learn about our resources">Learn More</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/academics#resources" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-globe"></i></span>
+                <h3>Global Perspective</h3>
+                <p>We incorporate global perspectives through international curricula, cultural exchange programs, and partnerships to prepare students for a connected world.</p>
+                <a href="contact.html#global" class="cta-button" aria-label="Learn about our global programs">Learn More</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/academics#global" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+            <section class="section-animated">
+                <h2 class="path-title">Student Success Stories</h2>
+                <div class="success-stories">
+                    <div class="success-card">
+                        <span class="success-quote"><i class="fas fa-quote-left"></i></span>
+                        <p>Winning the National Math Olympiad was a dream come true, thanks to Mega Mind’s STEM program!</p>
+                        <div class="success-author">Tolu A., Student</div>
+                    </div>
+                    <div class="success-card">
+                        <span class="success-quote"><i class="fas fa-quote-left"></i></span>
+                        <p>The drama club helped me discover my passion for acting and boosted my confidence.</p>
+                        <div class="success-author">Chisom O., Student</div>
+                    </div>
+                    <div class="success-card">
+                        <span class="success-quote"><i class="fas fa-quote-left"></i></span>
+                        <p>Our robotics team’s project won a regional award, thanks to our teachers’ guidance.</p>
+                        <div class="success-author">Ahmed K., Student</div>
+                    </div>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-user-plus"></i></span>
+                <h3>Join Our Academic Community</h3>
+                <p>Ready to empower your child’s future? Explore our admission process or contact us for more details about our programs.</p>
+                <a href="admission.html" class="cta-button" aria-label="Apply now">Apply Now</a>
+                <a href="contact.html" class="cta-button" aria-label="Contact us" style="margin-left: 1vw;">Contact Us</a>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/academics" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <nav class="nav-container">
+        <a href="index.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-home"></i></span>Home</a>
+        <a href="about.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-info-circle"></i></span>About</a>
+        <a href="academics.html" class="nav-item active" tabindex="0"><span class="nav-icon"><i class="fas fa-book"></i></span>Academics</a>
+        <a href="admission.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-user-plus"></i></span>Admission</a>
+        <a href="contact.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+    </nav>
+    <footer>
+        © 2025 Mega Mind Model School | Founded by Mrs. A.O. Adedeji | Built by Sisco Ask
+    </footer>
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const toggleButton = document.querySelector('.mode-toggle i');
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleButton.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
+
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const body = document.body;
+            const toggleButton = document.querySelector('.mode-toggle i');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                toggleButton.className = 'fas fa-sun';
+            } else {
+                body.classList.remove('dark-mode');
+                toggleButton.className = 'fas fa-moon';
+            }
+        }
+
+        // Sparkle Field
+        function createSparkleField() {
+            const container = document.getElementById('sparkleField');
+            for (let i = 0; i < 25; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 30 + 's';
+                sparkle.style.animationDuration = (Math.random() * 20 + 15) + 's';
+                sparkle.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
+                container.appendChild(sparkle);
+            }
+        }
+
+        // Navigation
+        function initNavigation() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            navItems.forEach(item => {
+                const href = item.getAttribute('href');
+                if (href === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const sections = document.querySelectorAll('.section-animated');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+        }
+
+        // Parallax Effect
+        function initParallax() {
+            const bg = document.querySelector('.school-bg');
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        bg.style.transform = `translateY(${scrollY * 0.3}px)`;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+
+        // Initialize
+        function init() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    loadTheme();
+                    document.querySelector('.mode-toggle').addEventListener('click', toggleTheme);
+                    createSparkleField();
+                    initNavigation();
+                    initScrollAnimations();
+                    initParallax();
+                });
+            } else {
+                loadTheme();
+                document.querySelector('.mode-toggle').addEventListener('click', toggleTheme);
+                createSparkleField();
+                initNavigation();
+                initScrollAnimations();
+                initParallax();
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>

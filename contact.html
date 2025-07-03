@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Mega Mind Model School in Lagos, Nigeria for inquiries about admissions, programs, or general information.">
+    <meta name="keywords" content="Mega Mind Model School, contact, admissions, inquiries, Lagos, Nigeria">
+    <meta name="author" content="Mega Mind Model School">
+    <meta property="og:title" content="Contact Mega Mind Model School">
+    <meta property="og:description" content="Reach out to Mega Mind Model School for admissions, program details, or general inquiries in Lagos, Nigeria.">
+    <meta property="og:image" content="https://megamindschool.com/og-image.jpg">
+    <meta property="og:url" content="https://megamindschool.com/contact.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Contact Us - Mega Mind Model School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-pink: #FF69B4;
+            --primary-blue: #1E90FF;
+            --primary-gradient: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-pink) 100%);
+            --background-light: #F5F8FA;
+            --background-dark: #1C2526;
+            --text-primary-light: #2A004D;
+            --text-secondary-light: rgba(42, 0, 77, 0.7);
+            --text-primary-dark: #FFFFFF;
+            --text-secondary-dark: rgba(255, 255, 255, 0.85);
+            --glass-bg-light: rgba(255, 255, 255, 0.3);
+            --glass-bg-dark: rgba(255, 255, 255, 0.1);
+            --glass-border-light: rgba(30, 144, 255, 0.3);
+            --glass-border-dark: rgba(255, 105, 180, 0.3);
+            --background: var(--background-light);
+            --text-primary: var(--text-primary-light);
+            --text-secondary: var(--text-secondary-light);
+            --glass-bg: var(--glass-bg-light);
+            --glass-border: var(--glass-border-light);
+            --shadow-glow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            --max-width: 1200px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background);
+            min-height: 100vh;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            --background: var(--background-dark);
+            --text-primary: var(--text-primary-dark);
+            --text-secondary: var(--text-secondary-dark);
+            --glass-bg: var(--glass-bg-dark);
+            --glass-border: var(--glass-border-dark);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        /* Mode Toggle */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            width: clamp(40px, 5vw, 50px);
+            height: clamp(40px, 5vw, 50px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background 0.3s ease, border 0.3s ease;
+        }
+
+        .mode-toggle i {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 5px var(--primary-pink));
+        }
+
+        .mode-toggle:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .mode-toggle:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        /* Background Effect */
+        .school-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(30, 144, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.3) 0%, transparent 50%);
+            animation: bgShift 20s ease-in-out infinite;
+        }
+
+        body.dark-mode .school-bg {
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(30, 144, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.2) 0%, transparent 50%);
+        }
+
+        @keyframes bgShift {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Sparkle Effect */
+        .sparkle-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: radial-gradient(circle, var(--primary-pink) 20%, transparent 80%);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--primary-blue), 0 0 15px var(--primary-pink);
+            animation: floatSparkle 30s infinite linear, pulseGlow 2s infinite alternate;
+            opacity: 0.6;
+        }
+
+        body.dark-mode .sparkle {
+            opacity: 0.8;
+        }
+
+        @keyframes floatSparkle {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0.6; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.2); opacity: 0.6; }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 8px var(--primary-blue), 0 0 15px var(--primary-pink); }
+            100% { box-shadow: 0 0 12px var(--primary-blue), 0 0 20px var(--primary-pink); }
+        }
+
+        /* Header */
+        .school-header {
+            text-align: center;
+            padding: 5vh 0;
+        }
+
+        .school-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            background: var(--primary-gradient);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .school-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-weight: 400;
+    color: var(--text-secondary);
+    margin-top: 1.5vh;
+    animation: fadeIn 1.5s ease-out;
+}
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Info Sections */
+        .info-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            margin: 0 0 6vh;
+            animation: scaleHover 0.3s ease;
+        }
+
+        .info-section .section-icon {
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 1.5vh;
+            color: var(--primary-blue);
+            filter: drop-shadow(0 0 10px var(--primary-pink));
+        }
+
+        .info-section h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .info-section p, .info-section li {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+        }
+
+        /* Section Title */
+        .path-title {
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 3vh;
+            text-align: center;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2vw;
+            padding: 0;
+            margin-bottom: 6vh;
+        }
+
+        .contact-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-1vh) scale(1.03);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .contact-card h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .contact-card p, .contact-card a {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+            margin-bottom: 1vh;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            padding: 2vw;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .contact-form label {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5vh;
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form select {
+            padding: 1vw;
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            color: var(--text-primary);
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+            border: 1px solid var(--primary-pink);
+            box-shadow: 0 0 8px var(--primary-pink);
+            outline: none;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form .submit-button {
+            padding: 1vw 2vw;
+            background: var(--primary-gradient);
+            border: none;
+            border-radius: 25px;
+            color: #FFFFFF;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form .submit-button:hover {
+            transform: translateY(-0.5vh) scale(1.03);
+            box-shadow: var(--shadow-glow);
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-blue) 100%);
+        }
+
+        .contact-form .submit-button:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5vh;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            padding: 1.5vw;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-0.5vh);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .faq-item h4 {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5vh;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .faq-item h4:hover {
+            color: var(--primary-blue);
+        }
+
+        .faq-item h4::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--primary-pink);
+        }
+
+        .faq-item.active h4::after {
+            content: '\f106';
+        }
+
+        .faq-item p {
+            display: none;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+            margin-top: 1vh;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        /* Map Section */
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 6vh;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Office Hours */
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2vw;
+            padding: 0;
+            margin-bottom: 6vh;
+        }
+
+        .hours-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            text-align: center;
+        }
+
+        .hours-card h4 {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1vh;
+        }
+
+        .hours-card p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+        }
+
+        /* Social Media Connect */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2vw;
+            padding: 0;
+            margin-bottom: 6vh;
+        }
+
+        .social-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-1vh) scale(1.03);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .social-card i {
+            font-size: clamp(1.5rem, 2vw, 2rem);
+            color: var(--primary-blue);
+            margin-bottom: 1vh;
+        }
+
+        .social-card a {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .social-card a:hover {
+            color: var(--primary-pink);
+        }
+
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2vw;
+            padding: 0;
+            margin-bottom: 6vh;
+        }
+
+        .testimonial-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2vw;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-1vh) scale(1.03);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .testimonial-card p {
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 1vh;
+        }
+
+        .testimonial-card h4 {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            padding: 1vw 2vw;
+            background: var(--primary-gradient);
+            border: none;
+            border-radius: 25px;
+            color: #FFFFFF;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-0.5vh) scale(1.03);
+            box-shadow: var(--shadow-glow);
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-blue) 100%);
+        }
+
+        .cta-button:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        /* Social Sharing */
+        .social-share {
+            margin-top: 1vh;
+            display: flex;
+            gap: 1vw;
+            justify-content: center;
+        }
+
+        .share-btn {
+            color: var(--primary-pink);
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .share-btn:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2vh 0;
+            color: var(--text-secondary);
+            font-size: clamp(0.8rem, 1vw, 1rem);
+            margin-top: 6vh;
+            background: var(--glass-bg);
+        }
+
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            bottom: 2vh;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 1vw 2vw;
+            display: flex;
+            gap: 1vw;
+            box-shadow: var(--shadow-glow);
+            z-index: 1000;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1vw 1.5vw;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: clamp(0.7rem, 1vw, 0.9rem);
+            font-weight: 500;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.4);
+            color: var(--text-primary);
+            transform: translateY(-0.5vh);
+        }
+
+        .nav-item.active {
+            background: var(--primary-gradient);
+            color: #FFFFFF;
+        }
+
+        .nav-item:focus {
+            outline: 2px solid var(--primary-pink);
+        }
+
+        .nav-icon {
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            margin-bottom: 0.5vh;
+        }
+
+        /* Scroll Animations */
+        .section-animated {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section-animated.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .contact-grid, .hours-grid, .social-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .school-title {
+                font-size: 2rem;
+            }
+
+            .path-title {
+                font-size: 1.5rem;
+            }
+
+            .social-share {
+                flex-direction: column;
+                gap: 1vh;
+            }
+
+            .nav-container {
+                padding: 1vw;
+                gap: 0.5vw;
+                bottom: 1vh;
+            }
+
+            .nav-item {
+                padding: 1vw;
+                font-size: 0.7rem;
+            }
+
+            .nav-icon {
+                font-size: 1rem;
+            }
+
+            .mode-toggle {
+                top: 10px;
+                left: 10px;
+                width: clamp(35px, 4vw, 40px);
+                height: clamp(35px, 4vw, 40px);
+            }
+
+            .contact-form {
+                padding: 3vw;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        body.dark-mode ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-pink);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-blue);
+        }
+    </style>
+</head>
+<body>
+    <button class="mode-toggle" aria-label="Toggle between day and dark mode" tabindex="0">
+        <i class="fas fa-moon"></i>
+    </button>
+    <div class="school-bg" data-parallax="0.3"></div>
+    <div class="sparkle-field" id="sparkleField"></div>
+    <main class="main-content">
+        <div class="container">
+            <header class="school-header">
+                <h1 class="school-title">Contact Mega Mind</h1>
+                <p class="school-subtitle">Connect with Our Vibrant Learning Community</p>
+            </header>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-envelope"></i></span>
+                <h3>Get in Touch</h3>
+                <p>We’re thrilled to assist you with any inquiries about Mega Mind Model School. Whether it’s about admissions, programs, or a campus visit, our team is here to help. Use the contact details below, fill out our form, or connect with us on social media.</p>
+                <div class="social-share">
+                    <a href="https://x.com/share?url=https://megamindschool.com/contact" class="share-btn" rel="noopener noreferrer" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://megamindschool.com/contact" class="share-btn" rel="noopener noreferrer" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:info@megamindschool.com" class="share-btn" rel="noopener noreferrer" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </section>
+            <section class="section-animated">
+                <h2 class="path-title">Contact Information</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+234123456789">+234 123 456 789</a></p>
+                        <p>Available Monday–Friday, 8:00 AM–4:00 PM</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@megamindschool.com">info@megamindschool.com</a></p>
+                        <p>Response within 24–48 hours</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Address</h3>
+                        <p>!2, Pious Echibiri Street, Off Gas COmpany , Itoki , Ogun State, Nigeria</p>
+                        <p>Visit us during office hours</p>
+                    </div>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-comment"></i></span>
+                <h3>Contact Form</h3>
+                <p>Send us a message, and we’ll get back to you promptly. Please provide as much detail as possible to help us assist you better.</p>
+                <form class="contact-form" action="/submit-contact" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-label="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-label="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiry">Inquiry Type</label>
+                        <select id="inquiry" name="inquiry" required aria-label="Inquiry Type">
+                            <option value="" disabled selected>Select an inquiry type</option>
+                            <option value="admissions">Admissions</option>
+                            <option value="programs">Programs</option>
+                            <option value="tour">Campus Tour</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Type your message here" required aria-label="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button" aria-label="Submit Contact Form">Send Message</button>
+                </form>
+                <div class="social-share">
+                   <a href="https://wa.me/2348012345678" class="share-btn" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://megamindschool.com/contact#form" class="share-btn" rel="noopener noreferrer" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-map-marker-alt"></i></span>
+                <h3>Find Us</h3>
+                <p>Visit our campus in Ikeja, Lagos to experience our vibrant learning environment. Schedule a tour to explore our facilities.</p>
+                <div class="map-container">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.6247955019585!2d3.28575!3d6.71361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bcd99b2f1c8b3%3A0xabcdef1234567890!2sItoki%2C%20Ogun%20State%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1720000000000!5m2!1sen!2sng" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <a href="https://maps.app.goo.gl/cpPpyvdji2f4wyFq5" class="cta-button" target="_blank" aria-label="Get Directions">Get Directions</a>
+                <div class="social-share">
+                   <a href="https://wa.me/2348012345678" class="share-btn" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://megamindschool.com/contact#map" class="share-btn" rel="noopener noreferrer" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:info@megamindschool.com" class="share-btn" rel="noopener noreferrer" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-clock"></i></span>
+                <h3>Office Hours</h3>
+                <p>We’re available to assist you during the following hours. Please contact us or visit during these times.</p>
+                <div class="hours-grid">
+                    <div class="hours-card">
+                        <h4>Monday–Friday</h4>
+                        <p>8:00 AM – 4:00 PM</p>
+                    </div>
+                    <div class="hours-card">
+                        <h4>Saturday</h4>
+                        <p>9:00 AM – 12:00 PM (By Appointment)</p>
+                    </div>
+                    <div class="hours-card">
+                        <h4>Sunday & Holidays</h4>
+                        <p>Closed</p>
+                    </div>
+                </div>
+                <a href="#contact" class="cta-button" aria-label="Schedule a Visit">Schedule a Visit</a>
+                <div class="social-share">
+                    <a href="https://wa.me/2348012345678" class="share-btn" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://megamindschool.com/contact#hours" class="share-btn" rel="noopener noreferrer" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:info@megamindschool.com" class="share-btn" rel="noopener noreferrer" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-users"></i></span>
+                <h3>Social Media Connect</h3>
+                <p>Stay updated with Mega Mind Model School by following us on social media. Join our community online!</p>
+                <div class="social-grid">
+                    <div class="social-card">
+                      <div>
+  <i class="fab fa-whatsapp"></i>
+  <p><a href="https://wa.me/2348012345678" target="_blank" rel="noopener noreferrer">Chat with MegaMindSchool</a></p>
+</div>
+                    </div>
+                    <div class="social-card">
+                        <i class="fab fa-facebook-f"></i>
+                        <p><a href="https://facebook.com/megamindschool" target="_blank" rel="noopener noreferrer">MegaMindSchool</a></p>
+                    </div>
+                    <div class="social-card">
+                        <i class="fab fa-instagram"></i>
+                        <p><a href="https://instagram.com/megamindschool" target="_blank" rel="noopener noreferrer">@MegaMindSchool</a></p>
+                    </div>
+                </div>
+                <a href="#contact" class="cta-button" aria-label="Follow Us">Follow Us</a>
+                <div class="social-share">
+                   <a href="https://wa.me/2348012345678" class="share-btn" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://megamindschool.com/contact#social" class="share-btn" rel="noopener noreferrer" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:info@megamindschool.com" class="share-btn" rel="noopener noreferrer" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-question-circle"></i></span>
+                <h3>Frequently Asked Questions</h3>
+                <p>Find answers to common questions about contacting Mega Mind Model School.</p>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h4>How can I schedule a school tour?</h4>
+                        <p>Contact our admissions office via phone or email to book a tour. We offer tours on weekdays by appointment.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What are your office hours?</h4>
+                        <p>Our office is open Monday to Friday, 8:00 AM to 4:00 PM, and Saturday, 9:00 AM to 12:00 PM by appointment. We’re closed on Sundays and public holidays.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is the best way to reach the admissions team?</h4>
+                        <p>Email us at <a href="mailto:info@megamindschool.com">info@megamindschool.com</a> or use the contact form above for the fastest response.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I contact specific departments directly?</h4>
+                        <p>Yes, you can reach our admissions, academic, or administrative teams via email. Please specify your inquiry type in the contact form.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do I get updates on school events?</h4>
+                        <p>Follow us on social media or subscribe to our newsletter via the contact form for the latest news and events.</p>
+                    </div>
+                </div>
+                <a href="#contact" class="cta-button" aria-label="Ask a Question">Ask a Question</a>
+                <div class="social-share">
+                   <a href="https://wa.me/2348012345678" class="share-btn" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://megamindschool.com/contact#faq" class="share-btn" rel="noopener noreferrer" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:info@megamindschool.com" class="share-btn" rel="noopener noreferrer" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </section>
+            <section class="info-section section-animated">
+                <span class="section-icon"><i class="fas fa-heart"></i></span>
+                <h3>Parent Testimonials</h3>
+                <p>Hear from parents who have chosen Mega Mind Model School for their children.</p>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"Mega Mind has transformed my child's learning experience. The staff are supportive and always available to answer our questions."</p>
+                        <h4>— Mrs. Adebayo, Parent</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"The admissions team made the enrollment process seamless. We felt welcomed from day one!"</p>
+                        <h4>— Mr. Okeke, Parent</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"The school's communication is top-notch. They respond promptly and keep us informed."</p>
+                        <h4>— Mrs. Johnson, Parent</h4>
+                    </div>
+                </div>
+                <a href="#contact" class="cta-button" aria-label="Share Your Feedback">Share Your Feedback</a>
+                <div class="social-share">
+                   <a href="https://wa.me/2348012345678" class="share-btn" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://megamindschool.com/contact#testimonials" class="share-btn" rel="noopener noreferrer" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:info@megamindschool.com" class="share-btn" rel="noopener noreferrer" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <nav class="nav-container">
+        <a href="index.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-home"></i></span>Home</a>
+        <a href="about.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-info-circle"></i></span>About</a>
+        <a href="academics.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-book"></i></span>Academics</a>
+        <a href="admission.html" class="nav-item" tabindex="0"><span class="nav-icon"><i class="fas fa-user-plus"></i></span>Admission</a>
+        <a href="contact.html" class="nav-item active" tabindex="0"><span class="nav-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+    </nav>
+    <footer>
+        © 2025 Mega Mind Model School | Built by Sisco Ask
+    </footer>
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const toggleButton = document.querySelector('.mode-toggle i');
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleButton.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
+
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const body = document.body;
+            const toggleButton = document.querySelector('.mode-toggle i');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                toggleButton.className = 'fas fa-sun';
+            } else {
+                body.classList.remove('dark-mode');
+                toggleButton.className = 'fas fa-moon';
+            }
+        }
+
+        // Sparkle Field
+        function createSparkleField() {
+            const container = document.getElementById('sparkleField');
+            for (let i = 0; i < 25; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 30 + 's';
+                sparkle.style.animationDuration = (Math.random() * 20 + 15) + 's';
+                sparkle.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
+                container.appendChild(sparkle);
+            }
+        }
+
+        // Navigation
+        function initNavigation() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            navItems.forEach(item => {
+                const href = item.getAttribute('href');
+                if (href === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const sections = document.querySelectorAll('.section-animated');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+        }
+
+        // Parallax Effect
+        function initParallax() {
+            const bg = document.querySelector('.school-bg');
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        bg.style.transform = `translateY(${scrollY * 0.3}px)`;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+
+        // FAQ Toggle
+        function initFAQs() {
+            const faqItems = document.querySelectorAll('.faq-item h4');
+            faqItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const parent = item.parentElement;
+                    parent.classList.toggle('active');
+                });
+            });
+        }
+
+        // Initialize
+        function init() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    loadTheme();
+                    document.querySelector('.mode-toggle').addEventListener('click', toggleTheme);
+                    createSparkleField();
+                    initNavigation();
+                    initScrollAnimations();
+                    initParallax();
+                    initFAQs();
+                });
+            } else {
+                loadTheme();
+                document.querySelector('.mode-toggle').addEventListener('click', toggleTheme);
+                createSparkleField();
+                initNavigation();
+                initScrollAnimations();
+                initParallax();
+                initFAQs();
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
